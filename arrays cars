@@ -1,0 +1,21 @@
+#include<iostream>
+#include<string>
+
+int main(){
+    int numbers;
+    std::cout<<"how many cars do you have?"<<std::endl;
+    std::cin>>numbers;
+    std::cin.ignore();
+    std::string* pCars = new std::string[numbers];
+    //pointer
+
+    for(int i = 0;i<numbers;i++){
+        std::cout<<"enter car number:"<<i+1<<std::endl;
+        std::cin>>pCars[i];
+    }
+    std::cout<<"here is your garage!"<<std::endl;
+
+    for(int i = 0;i<numbers;i++){
+        std::cout<<"parking lot"<<i+1<<" "<<pCars[i]<<std::endl;
+    }
+}
